@@ -1,0 +1,14 @@
+{
+  "schemaPath": "schema.gql",
+  "includes": ["*.gql"],
+  "extensions": {
+    "endpoints": {
+      "dev": {
+        "url": "http://localhost:22015/graphql",
+        "headers": {
+          "Authorization" "Bearer fnADne4p_CACE1G1ISBNEhYItey17VD5FsfXDfIU"
+        }
+      }
+    }
+  }
+}

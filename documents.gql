@@ -1,0 +1,35 @@
+# Create a new user
+mutation createUser($user: UserInput!) {
+  createUser(data: $user) {
+    _id
+    username
+  }
+}
+
+# Retrieve paginated users. Defaults to all!
+query getUsers($perPage: Int, $cursor: String) {
+  allUsers(_size: $perPage, _cursor: $cursor) {
+    data {
+      _id
+      username
+    }
+    before
+    after
+  }
+}
+
+query User($username: String!) {
+  findUserByUsername(username: $username) {
+    _id
+    username
+    tracks {
+      data {
+        _id
+        _ts
+        title
+        file
+        description
+      }
+    }
+  }
+}

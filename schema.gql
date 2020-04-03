@@ -1,0 +1,17 @@
+type User {
+  username: String! @unique
+  tracks: [Track!] @relation
+}
+
+type Track {
+  title: String! @unique
+  description: String!
+  file: String @unique
+  user: User! @relation
+}
+
+type Query {
+  allUsers: [User!]!
+  findUserByUsername(username: String!): User
+  findTrackByTitle(title: String!): Track
+}

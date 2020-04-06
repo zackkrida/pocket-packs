@@ -2,6 +2,7 @@
 mutation createUser($user: UserInput!) {
   createUser(data: $user) {
     _id
+    _ts
     username
   }
 }
@@ -11,6 +12,7 @@ query getUsers($perPage: Int, $cursor: String) {
   allUsers(_size: $perPage, _cursor: $cursor) {
     data {
       _id
+      _ts
       username
     }
     before
@@ -21,6 +23,7 @@ query getUsers($perPage: Int, $cursor: String) {
 query User($username: String!) {
   findUserByUsername(username: $username) {
     _id
+    _ts
     username
     tracks {
       data {
@@ -29,6 +32,38 @@ query User($username: String!) {
         title
         file
         description
+      }
+    }
+  }
+}
+
+mutation createTag($tag: TagInput!) {
+  createTag(data: $tag) {
+    _id
+    _ts
+    name
+    color
+    tracks {
+      data {
+        _id
+        _ts
+        title
+      }
+    }
+  }
+}
+
+query findTag($name) {
+  findTagByName(name: $name) {
+    _id
+    _ts
+    name
+    color
+    tracks {
+      data {
+        _id
+        _ts
+        title
       }
     }
   }

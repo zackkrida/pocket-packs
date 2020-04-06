@@ -23,7 +23,7 @@ export const Footer = () => {
               "https://zackkrida.com?utm_source=po-packs.com&utm_medium=website&utm_campaign=referral"
             }
           >
-            zackkrida
+            zackkrida.
           </a>
         </p>
       </section>
@@ -34,6 +34,9 @@ export const Footer = () => {
             <Link href="/about">
               <a>About pocket-packs</a>
             </Link>
+          </li>
+          <li>
+            <a href="https://www.reddit.com/r/pocketoperators/">Community</a>
           </li>
           <li>
             <a href="https://teenage.engineering/guides">

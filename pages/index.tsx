@@ -2,6 +2,7 @@
 import { NextPage } from "next";
 import React from "react";
 import { Page } from "../components/Page";
+import Link from "next/link";
 
 const Home: NextPage = () => (
   <Page
@@ -12,7 +13,9 @@ const Home: NextPage = () => (
     <section>
       <h1>Find samples &amp; tracks for your pocket operators</h1>
       <input type="text" placeholder="search for samples and patches" /> or{" "}
-      <button>Upload your own</button>
+      <Link href="/upload">
+        <a>Upload your own</a>
+      </Link>
     </section>
     <section>
       <h2>Recent uploads</h2>

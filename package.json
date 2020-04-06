@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.9.0",
     "faunadb": "^2.13.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.3.4",
     "ramda": "^0.27.0",
     "react": "^16.13.1",

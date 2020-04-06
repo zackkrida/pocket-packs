@@ -3,15 +3,24 @@ type User {
   tracks: [Track!] @relation
 }
 
+type Tag {
+  name: String! @unique
+  color: String! @unique
+  tracks: [Track!] @relation
+}
+
 type Track {
   title: String! @unique
   description: String!
-  file: String @unique
+  sampleFile: String @unique
+  patchFile: String @unique
   user: User! @relation
+  tags: [Tag!] @relation
 }
 
 type Query {
   allUsers: [User!]!
   findUserByUsername(username: String!): User
   findTrackByTitle(title: String!): Track
+  findTagByName(name: String!): Tag
 }

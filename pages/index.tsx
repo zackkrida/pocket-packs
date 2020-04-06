@@ -1,26 +1,26 @@
-import Head from "next/head";
-import React from "react";
 // import styles from "./index.module.css";
 import { NextPage } from "next";
-import Link from "next/link";
+import React from "react";
+import { Page } from "../components/Page";
 
 const Home: NextPage = () => (
-  <div>
-    <Head>
-      <title>Home Page! Pretty Cool</title>
-    </Head>
-    <header>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </header>
-    <h1>Home Page!</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-      eaque dolore repellat nobis laborum vitae inventore placeat accusantium
-      provident rem.
-    </p>
-  </div>
+  <Page
+    title={
+      "pocket-packs | samples and patches for teenage engineering pocket operators"
+    }
+  >
+    <section>
+      <h1>Find samples &amp; tracks for your pocket operators</h1>
+      <input type="text" placeholder="search for samples and patches" /> or{" "}
+      <button>Upload your own</button>
+    </section>
+    <section>
+      <h2>Recent uploads</h2>
+    </section>
+    <section>
+      <h2>Popular Tags</h2>
+    </section>
+  </Page>
 );
 
 export default Home;
